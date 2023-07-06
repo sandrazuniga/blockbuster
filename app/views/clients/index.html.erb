@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <h1>Clientes</h1>
+  <br>
+
+  <%= link_to "Nuevo Cliente", new_client_path, class: "btn btn-primary" %>
+  <div id="clients">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Película</th>
+          <th scope="col" colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @clients.each do |client| %>
+          <%= render client %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
